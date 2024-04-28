@@ -76,7 +76,8 @@ Test connection using any client (workbench, mysql client or phpmyadmin )
 
 # Step 9: Grant priviliges to users using either below to see and perform operations on the db
 
+`
 GRANT CREATE ON techpeakdb._ TO 'olaleye'@'%' with grant option;
 GRANT CREATE, SELECT, DELETE ON techpeakdb._ TO 'achiever'@'%' with grant option;
-GRANT ALL ON techpeakdb._ TO 'achiever'@'%' with grant option;
-GRANT ALL ON _.\* TO 'achiever'@'%' with grant option;
+GRANT ALL ON techpeakdb._ TO 'olaleye'@'%' with grant option;
+GRANT ALL ON _.\* TO 'olaleye'@'%' with grant option;`
