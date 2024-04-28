@@ -49,11 +49,11 @@ VALUES (3, 'Ogbu', 'Victor', 'Maths', 98);
 
 // create a user with a password plugin and provide a password.
 
-CREATE USER 'achiever'@'localhost' IDENTIFIED BY 'Passw@rd//;098';
+CREATE USER 'olaleye'@'localhost' IDENTIFIED BY 'Yourpassword';
 
 or
 
-CREATE USER 'achiever'@'%' IDENTIFIED WITH mysql_native_password BY 'Passw@rd//;098';
+CREATE USER 'olaleye'@'%' IDENTIFIED WITH mysql_native_password BY 'Yourpassword';
 
 FLUSH PRIVILEGES;
 
@@ -76,7 +76,7 @@ Test connection using any client (workbench, mysql client or phpmyadmin )
 
 # Step 9: Grant priviliges to users using either below to see and perform operations on the db
 
-GRANT CREATE ON techpeakdb._ TO 'achiever'@'%' with grant option;
+GRANT CREATE ON techpeakdb._ TO 'olaleye'@'%' with grant option;
 GRANT CREATE, SELECT, DELETE ON techpeakdb._ TO 'achiever'@'%' with grant option;
 GRANT ALL ON techpeakdb._ TO 'achiever'@'%' with grant option;
 GRANT ALL ON _.\* TO 'achiever'@'%' with grant option;
