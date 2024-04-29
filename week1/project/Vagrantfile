@@ -1,0 +1,48 @@
+
+Vagrant.configure("2") do |config|
+config.hostmanager.enabled = true
+config.hostmanager.manage_host = true
+
+# Database server vm
+
+config.vm.define "db-server" do |db-server|
+db-server.vm.box = "centos/07"
+db-server.vm.hostname = "db-server"
+db-server.vm.network "private_network", ip: "192.168.56.15"
+db-server.vm.provider "virtualbox" do |vb|
+vb.memory = "1024"
+end
+
+end
+
+# Web server VM
+
+config.vm.define "web-server" do |web-server|
+web-server.vm.box = "ubuntu/trusty64"
+web-server.vm.hostname = "web-server"
+web-server.vm.network "private_network", ip: "192.168.56.11"
+web-server.vm.provider "virtualbox" do |vb|
+vb.gui = true
+vb.memory = "1024"
+end
+end
+
+# provision 
+config.vm.provision "shell", path: "./script.sh"
+  
+end
+
+# # inline provisioning `to run on browser
+# config.vm.provision "shell", inline: <<-SHELL
+# apt get update
+# apt get install -y apache2
+# SHELL
+# end
+
+## change
+# web-server.vm.network "private_network", ip: "192.168.56.11" to  config.vm.network "forwarded_port", guest:80, host: 8080
+##then run 
+#curl localhost:80 
+
+
+#vagrant reload

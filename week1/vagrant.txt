@@ -1,2 +1,0 @@
-learn more aboute vagrant  https://www.vagrantup.com/
-to spinup morethan one server  generate code here https://vagrantfile-generator.vercel.app/
