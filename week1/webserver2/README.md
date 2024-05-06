@@ -55,7 +55,24 @@ Certainly! Let's break down each command:
     Optional: `> data.bak` - this will clear all the file in data.bak.
 20. `curl localhost:9000` - this will return "nginx is awesome".
 
-Note: `apt` doesn't work on Ubuntu OS, `yum` works.
+Note:
+On Linux-based systems, Apache and Nginx can usually be installed using package managers like `apt`, `yum`, or `dnf`. depends on the OS .
+
+# Ubuntu (using apt)
+
+```
+sudo apt update
+sudo apt install apache2   # For Apache
+sudo apt install nginx     # For Nginx
+```
+
+# CentOS (using yum)
+
+```
+sudo yum update
+sudo yum install httpd     # For Apache
+sudo yum install nginx     # For Nginx
+```
 
 Certainly! Here's a revised version with some improvements in clarity, formatting, and correctness:
 
