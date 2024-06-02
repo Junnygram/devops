@@ -331,9 +331,9 @@ Region: us-east-1
 |                      | EC2 Instance       |     |     | EC2 Instance |     |
 | -------------------- | ------------------ |
 
----
+--- ````→ **RDS Instances**.
 
-````→ **RDS Instances**.
+
 
 
 
@@ -498,12 +498,7 @@ When you create an EC2 instance, AWS requires a key pair for secure SSH access. 
     - Convert the `.pem` file to a `.ppk` file using PuTTYgen.
     - Configure PuTTY to use the `.ppk` file for SSH connections.
 
-### Summary
 
-- **Key Pairs**: Essential for secure SSH access to EC2 instances. Generate a key pair and download the private key securely.
-- **Instance Launch**: Choose the right AMI and instance type, configure network and storage settings, and ensure security measures like setting SSH access restrictions.
-- **SSH Access**: Use the private key to connect to your instance securely.
-### AWS EC2 Instance Management and Connection Guide
 
 #### Managing EC2 Instances
 
