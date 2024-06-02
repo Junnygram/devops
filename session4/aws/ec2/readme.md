@@ -151,8 +151,6 @@ AWS offers a wide variety of EC2 instance types to cater to different use cases.
 4. **Estimate Costs**:
    - The calculator will provide an estimated monthly cost based on your inputs. Adjust configurations as needed to fit your budget.
 
-
-
 ### Understanding EC2 Instance Types:
 
 AWS EC2 instances come in different families and sizes to match a variety of use cases. Here's a breakdown:
@@ -219,7 +217,6 @@ AWS EC2 instances come in different families and sizes to match a variety of use
      - **EC2 Instances**: Icons for your compute resources.
      - **Database**: Icon for RDS or DynamoDB.
      - **Edge Locations**: Icons for CloudFront for CDN.
-       
    - **Flow**:
      - Users -> Load Balancer -> EC2 Instances -> Database.
      - Include CloudFront for caching static content.
@@ -333,99 +330,104 @@ Region: us-east-1
 
 --- ````→ **RDS Instances**.
 
-
-
-
-
-#### AWS Free Tier Overview ###
+#### AWS Free Tier Overview
 
 AWS offers a Free Tier that includes 750 hours per month of t2.micro or t3.micro instances for a full year. Here’s a detailed breakdown:
 
 1. **750 Hours Per Month**:
-    - This is calculated by multiplying the number of instances by the hours they run.
-    - For example:
-        - 1 instance running for 24 hours/day for 31 days = 744 hours.
-        - 2 instances running for 12 hours/day each for 31 days = 744 hours.
-    - If you exceed 750 hours in a month, you will be charged for the extra hours.
+   - This is calculated by multiplying the number of instances by the hours they run.
+   - For example:
+     - 1 instance running for 24 hours/day for 31 days = 744 hours.
+     - 2 instances running for 12 hours/day each for 31 days = 744 hours.
+   - If you exceed 750 hours in a month, you will be charged for the extra hours.
 
 #### Instance Hours Calculation
 
 If you spin up multiple instances, their running time accumulates. Here’s an example to clarify:
 
 - **Scenario**:
-    - You launch one EC2 instance and let it run for 24 hours.
-    - You then launch another EC2 instance and let both run for another 24 hours.
+
+  - You launch one EC2 instance and let it run for 24 hours.
+  - You then launch another EC2 instance and let both run for another 24 hours.
 
 - **Calculation**:
-    - First instance: 24 hours.
-    - Second instance: 24 hours (for the first 24 hours) + 24 hours (when both are running).
-    - Total = 24 + 24 + 24 = 72 hours.
+  - First instance: 24 hours.
+  - Second instance: 24 hours (for the first 24 hours) + 24 hours (when both are running).
+  - Total = 24 + 24 + 24 = 72 hours.
 
 #### Selecting an Amazon Machine Image (AMI)
 
 1. **AMI ID**:
-    - Each AMI has a unique ID.
-    - Make sure to select AMIs labeled with "Free tier eligible" to avoid charges.
+
+   - Each AMI has a unique ID.
+   - Make sure to select AMIs labeled with "Free tier eligible" to avoid charges.
 
 2. **Navigating the AMI List**:
-    - Access the AWS Management Console.
-    - Go to the EC2 Dashboard.
-    - Click "Launch Instance".
-    - Browse available AMIs.
-    - Ensure the selected AMI is marked as “Free tier eligible”.
+
+   - Access the AWS Management Console.
+   - Go to the EC2 Dashboard.
+   - Click "Launch Instance".
+   - Browse available AMIs.
+   - Ensure the selected AMI is marked as “Free tier eligible”.
 
 3. **Operating Systems**:
-    - Common AMIs include Amazon Linux, Ubuntu, Windows, and others.
-    - Select the operating system that meets your project requirements.
+   - Common AMIs include Amazon Linux, Ubuntu, Windows, and others.
+   - Select the operating system that meets your project requirements.
 
 #### Pricing Models for EC2 Instances
 
 AWS offers various pricing models for EC2 instances:
 
 1. **On-Demand Instances**:
-    - Pay by the hour or second, depending on the instance type.
-    - No long-term commitments or upfront payments.
-    - Ideal for short-term workloads or unpredictable traffic.
+
+   - Pay by the hour or second, depending on the instance type.
+   - No long-term commitments or upfront payments.
+   - Ideal for short-term workloads or unpredictable traffic.
 
 2. **Reserved Instances**:
-    - Commit to using EC2 for a one- or three-year term.
-    - Significant discounts compared to On-Demand pricing.
-    - Best for steady-state or predictable usage.
+
+   - Commit to using EC2 for a one- or three-year term.
+   - Significant discounts compared to On-Demand pricing.
+   - Best for steady-state or predictable usage.
 
 3. **Spot Instances**:
-    - Bid for unused EC2 capacity.
-    - Up to 90% cheaper than On-Demand prices.
-    - Instances can be terminated by AWS with little notice, making them suitable for flexible workloads.
+
+   - Bid for unused EC2 capacity.
+   - Up to 90% cheaper than On-Demand prices.
+   - Instances can be terminated by AWS with little notice, making them suitable for flexible workloads.
 
 4. **Dedicated Hosts**:
-    - Physical servers dedicated to your use.
-    - Compliance requirements, server-bound software licenses.
-    - Higher cost but full control over the hardware.
+
+   - Physical servers dedicated to your use.
+   - Compliance requirements, server-bound software licenses.
+   - Higher cost but full control over the hardware.
 
 5. **Savings Plans**:
-    - Flexible pricing model offering lower prices compared to On-Demand, in exchange for a commitment to a consistent amount of usage (measured in $/hour) for a 1- or 3-year term.
-    - Applies automatically to any usage, making it easier to manage.
+   - Flexible pricing model offering lower prices compared to On-Demand, in exchange for a commitment to a consistent amount of usage (measured in $/hour) for a 1- or 3-year term.
+   - Applies automatically to any usage, making it easier to manage.
 
 #### Architecture Diagram Tips
 
 1. **Regions and Availability Zones**:
-    - Regions are large geographic areas (e.g., `us-east-1`).
-    - Availability Zones (AZs) are isolated locations within a region (e.g., `us-east-1a`).
+
+   - Regions are large geographic areas (e.g., `us-east-1`).
+   - Availability Zones (AZs) are isolated locations within a region (e.g., `us-east-1a`).
 
 2. **Creating Diagrams**:
-    - Use tools like Miro, Draw.io, or AWS Architecture Icons.
-    - Represent the region with a large boundary box.
-    - Inside the region, draw smaller boxes for each AZ.
-    - Add icons for EC2 instances, load balancers, databases, etc.
-    - Connect components with arrows to represent data flow.
+
+   - Use tools like Miro, Draw.io, or AWS Architecture Icons.
+   - Represent the region with a large boundary box.
+   - Inside the region, draw smaller boxes for each AZ.
+   - Add icons for EC2 instances, load balancers, databases, etc.
+   - Connect components with arrows to represent data flow.
 
 3. **Example Diagram Components**:
-    - **Region**: Enclose AZs in a boundary.
-    - **AZs**: Smaller boxes within the region.
-    - **EC2 Instances**: Icons within AZ boxes.
-    - **Load Balancer**: Icon above AZs with arrows to EC2 instances.
-    - **Users**: Icon outside the region boundary with an arrow to the load balancer.
-    - **Database (RDS)**: Connected to EC2 instances.
+   - **Region**: Enclose AZs in a boundary.
+   - **AZs**: Smaller boxes within the region.
+   - **EC2 Instances**: Icons within AZ boxes.
+   - **Load Balancer**: Icon above AZs with arrows to EC2 instances.
+   - **Users**: Icon outside the region boundary with an arrow to the load balancer.
+   - **Database (RDS)**: Connected to EC2 instances.
 
 ### AWS EC2 Key Pair and Instance Configuration Guide
 
@@ -434,213 +436,237 @@ AWS offers various pricing models for EC2 instances:
 When you create an EC2 instance, AWS requires a key pair for secure SSH access. Here’s how to generate and use key pairs effectively:
 
 1. **Generating Key Pairs**:
-    - AWS recommends creating an SSH key pair, which consists of a public key (stored on AWS) and a private key (stored on your local machine).
-    - The private key is used to securely connect to your EC2 instance via SSH.
+
+   - AWS recommends creating an SSH key pair, which consists of a public key (stored on AWS) and a private key (stored on your local machine).
+   - The private key is used to securely connect to your EC2 instance via SSH.
 
 2. **Steps to Create a Key Pair**:
-    - Navigate to the EC2 Dashboard in the AWS Management Console.
-    - Click on "Key Pairs" under the "Network & Security" section.
-    - Click "Create key pair".
-    - Provide a name for your key pair (e.g., `my-key-pair`).
-    - Choose the key type (`RSA` or `ED25519`). RSA is widely compatible, while ED25519 is more secure but may not be supported on all systems.
-    - Click "Create key pair". This will automatically download a `.pem` file to your local machine.
+
+   - Navigate to the EC2 Dashboard in the AWS Management Console.
+   - Click on "Key Pairs" under the "Network & Security" section.
+   - Click "Create key pair".
+   - Provide a name for your key pair (e.g., `my-key-pair`).
+   - Choose the key type (`RSA` or `ED25519`). RSA is widely compatible, while ED25519 is more secure but may not be supported on all systems.
+   - Click "Create key pair". This will automatically download a `.pem` file to your local machine.
 
 3. **Security and Best Practices**:
-    - **Security**: Store your private key (`.pem` file) securely. Do not share it or leave it exposed.
-    - **Reusability**: While you can use the same key pair for multiple instances during learning and development, it's best to create new key pairs for production environments for better security management.
+   - **Security**: Store your private key (`.pem` file) securely. Do not share it or leave it exposed.
+   - **Reusability**: While you can use the same key pair for multiple instances during learning and development, it's best to create new key pairs for production environments for better security management.
 
 #### Launching an EC2 Instance
 
 1. **Select an AMI**:
-    - Go to the EC2 Dashboard and click "Launch Instance".
-    - Choose an Amazon Machine Image (AMI) that is "Free tier eligible" to avoid charges.
+
+   - Go to the EC2 Dashboard and click "Launch Instance".
+   - Choose an Amazon Machine Image (AMI) that is "Free tier eligible" to avoid charges.
 
 2. **Instance Type**:
-    - Select an instance type that suits your needs. For the Free Tier, choose `t2.micro` or `t3.micro`.
+
+   - Select an instance type that suits your needs. For the Free Tier, choose `t2.micro` or `t3.micro`.
 
 3. **Key Pair Configuration**:
-    - During the setup, you'll be prompted to select an existing key pair or create a new one.
-    - Choose the key pair you created earlier (`my-key-pair`).
+
+   - During the setup, you'll be prompted to select an existing key pair or create a new one.
+   - Choose the key pair you created earlier (`my-key-pair`).
 
 4. **Network Settings**:
-    - Ensure your instance is within a Virtual Private Cloud (VPC).
-    - Configure security groups to allow SSH (port 22) access from your IP address. Avoid opening SSH access to the entire internet for security reasons.
+
+   - Ensure your instance is within a Virtual Private Cloud (VPC).
+   - Configure security groups to allow SSH (port 22) access from your IP address. Avoid opening SSH access to the entire internet for security reasons.
 
 5. **Storage Configuration**:
-    - Configure the instance storage as needed. The default settings typically suffice for basic usage.
-    - You can increase the storage size or add additional volumes if required.
+
+   - Configure the instance storage as needed. The default settings typically suffice for basic usage.
+   - You can increase the storage size or add additional volumes if required.
 
 6. **Instance Configuration Summary**:
-    - Review all configurations.
-    - Ensure the "Terminate Protection" option is considered, which prevents accidental termination of your instance.
+
+   - Review all configurations.
+   - Ensure the "Terminate Protection" option is considered, which prevents accidental termination of your instance.
 
 7. **Launch Instance**:
-    - Click "Launch" to start your instance.
-    - After a few minutes, your instance will be running and ready for use.
+   - Click "Launch" to start your instance.
+   - After a few minutes, your instance will be running and ready for use.
 
 #### Accessing Your EC2 Instance
 
 1. **SSH into Your Instance**:
-    - Open your terminal or an SSH client.
-    - Navigate to the directory containing your `.pem` file.
-    - Run the following command to set proper permissions for your key:
-      ```bash
-      chmod 400 my-key-pair.pem
-      ```
-    - Connect to your instance using the command provided by AWS, typically:
-      ```bash
-      ssh -i "my-key-pair.pem" ec2-user@<public-ip-address>
-      ```
-    - Replace `<public-ip-address>` with the actual IP address of your instance.
+
+   - Open your terminal or an SSH client.
+   - Navigate to the directory containing your `.pem` file.
+   - Run the following command to set proper permissions for your key:
+     ```bash
+     chmod 400 my-key-pair.pem
+     ```
+   - Connect to your instance using the command provided by AWS, typically:
+     ```bash
+     ssh -i "my-key-pair.pem" ec2-user@<public-ip-address>
+     ```
+   - Replace `<public-ip-address>` with the actual IP address of your instance.
 
 2. **Windows Users**:
-    - Use an SSH client like PuTTY.
-    - Convert the `.pem` file to a `.ppk` file using PuTTYgen.
-    - Configure PuTTY to use the `.ppk` file for SSH connections.
-
-
+   - Use an SSH client like PuTTY.
+   - Convert the `.pem` file to a `.ppk` file using PuTTYgen.
+   - Configure PuTTY to use the `.ppk` file for SSH connections.
 
 #### Managing EC2 Instances
 
 1. **Instance Actions**:
-    - **Start**: Start a stopped instance.
-    - **Stop**: Stop a running instance.
-    - **Reboot**: Reboot the instance.
-    - **Terminate**: Permanently delete the instance.
-    - **Hibernate**: Save the instance state and data to resume later (specific configurations needed).
+
+   - **Start**: Start a stopped instance.
+   - **Stop**: Stop a running instance.
+   - **Reboot**: Reboot the instance.
+   - **Terminate**: Permanently delete the instance.
+   - **Hibernate**: Save the instance state and data to resume later (specific configurations needed).
 
    These actions can be performed from the EC2 Management Console by selecting the instance and choosing the desired action from the “Actions” menu.
 
 #### Connecting to Your EC2 Instance
 
 1. **Instance Connection Options**:
-    - AWS provides several methods to connect to your EC2 instance:
-        - **SSH Client**: For secure terminal access.
-        - **EC2 Instance Connect**: Browser-based SSH connection.
-        - **Session Manager**: Secure, browser-based shell or CLI access without opening inbound ports.
+
+   - AWS provides several methods to connect to your EC2 instance:
+     - **SSH Client**: For secure terminal access.
+     - **EC2 Instance Connect**: Browser-based SSH connection.
+     - **Session Manager**: Secure, browser-based shell or CLI access without opening inbound ports.
 
 2. **Connecting via SSH Client**:
-    - **Retrieve Connection Details**:
-        - Public IP Address: Find this in the EC2 Management Console.
-        - Username: Default is `ec2-user` for Amazon Linux.
 
-    - **SSH Command**:
-        ```bash
-        ssh -i "my-key-pair.pem" ec2-user@<public-ip-address>
-        ```
+   - **Retrieve Connection Details**:
+
+     - Public IP Address: Find this in the EC2 Management Console.
+     - Username: Default is `ec2-user` for Amazon Linux.
+
+   - **SSH Command**:
+     ```bash
+     ssh -i "my-key-pair.pem" ec2-user@<public-ip-address>
+     ```
 
 3. **Connect via EC2 Instance Connect**:
-    - Select your instance in the EC2 Console.
-    - Click “Connect”.
-    - Choose “EC2 Instance Connect” and click “Connect”.
+
+   - Select your instance in the EC2 Console.
+   - Click “Connect”.
+   - Choose “EC2 Instance Connect” and click “Connect”.
 
 4. **Browser-Based SSH Connection**:
-    - AWS provides the option to connect to your instance through the browser, using EC2 Instance Connect.
+   - AWS provides the option to connect to your instance through the browser, using EC2 Instance Connect.
 
 #### Sample Commands on EC2 Instance
 
 1. **Update the System**:
-    ```bash
-    sudo yum update -y
-    ```
+
+   ```bash
+   sudo yum update -y
+   ```
 
 2. **Install Packages**:
-    - **Using YUM** (for Amazon Linux, CentOS):
-      ```bash
-      sudo yum install <package-name> -y
-      ```
 
-    - **Using APT** (for Ubuntu):
-      ```bash
-      sudo apt-get update
-      sudo apt-get install <package-name> -y
-      ```
+   - **Using YUM** (for Amazon Linux, CentOS):
+
+     ```bash
+     sudo yum install <package-name> -y
+     ```
+
+   - **Using APT** (for Ubuntu):
+     ```bash
+     sudo apt-get update
+     sudo apt-get install <package-name> -y
+     ```
 
 #### Setting Up a Windows Server on EC2
 
 1. **Launch a Windows Instance**:
-    - Go to the EC2 Dashboard.
-    - Click “Launch Instance”.
-    - Select a Windows AMI.
-    - Configure the instance details, storage, and security groups.
-    - Ensure RDP (port 3389) is allowed in the security group for remote desktop connection.
+
+   - Go to the EC2 Dashboard.
+   - Click “Launch Instance”.
+   - Select a Windows AMI.
+   - Configure the instance details, storage, and security groups.
+   - Ensure RDP (port 3389) is allowed in the security group for remote desktop connection.
 
 2. **Connecting to the Windows Instance**:
-    - Download the RDP file from the EC2 Console.
-    - Use the provided password to connect via Remote Desktop.
+   - Download the RDP file from the EC2 Console.
+   - Use the provided password to connect via Remote Desktop.
 
 #### Setting Up a Simple Web Application
 
 1. **Install a Web Server**:
-    - **Apache**:
-      ```bash
-      sudo yum install httpd -y  # For Amazon Linux
-      sudo systemctl start httpd
-      sudo systemctl enable httpd
-      ```
 
-    - **Nginx**:
-      ```bash
-      sudo yum install nginx -y  # For Amazon Linux
-      sudo systemctl start nginx
-      sudo systemctl enable nginx
-      ```
+   - **Apache**:
+
+     ```bash
+     sudo yum install httpd -y  # For Amazon Linux
+     sudo systemctl start httpd
+     sudo systemctl enable httpd
+     ```
+
+   - **Nginx**:
+     ```bash
+     sudo yum install nginx -y  # For Amazon Linux
+     sudo systemctl start nginx
+     sudo systemctl enable nginx
+     ```
 
 2. **Deploy a Web Application**:
-    - Place your web application files in `/var/www/html` (for Apache) or `/usr/share/nginx/html` (for Nginx).
+   - Place your web application files in `/var/www/html` (for Apache) or `/usr/share/nginx/html` (for Nginx).
+
 #### Step-by-Step: Setting Up a Simple Website on an EC2 Instance
 
 1. **Create an EC2 Instance**:
-    - Launch an EC2 instance using the AWS Management Console.
-    - Choose an Amazon Linux 2 AMI.
-    - Configure instance details, add storage, configure security groups to allow SSH (port 22) and HTTP (port 80).
-    - Review and launch the instance.
-    - Download the key pair.
+
+   - Launch an EC2 instance using the AWS Management Console.
+   - Choose an Amazon Linux 2 AMI.
+   - Configure instance details, add storage, configure security groups to allow SSH (port 22) and HTTP (port 80).
+   - Review and launch the instance.
+   - Download the key pair.
 
 2. **Connect to the EC2 Instance**:
-    - Open your terminal or Git Bash.
-    - Change the directory to where your key pair is located.
-    - Connect using SSH:
-        ```bash
-        ssh -i "path-to-your-key.pem" ec2-user@<public-ip-address>
-        ```
+
+   - Open your terminal or Git Bash.
+   - Change the directory to where your key pair is located.
+   - Connect using SSH:
+     ```bash
+     ssh -i "path-to-your-key.pem" ec2-user@<public-ip-address>
+     ```
 
 3. **Install a Web Server (Apache)**:
-    - Update the package manager and install Apache:
-        ```bash
-        sudo yum update -y
-        sudo yum install httpd -y
-        ```
-    - Start and enable the Apache service:
-        ```bash
-        sudo systemctl start httpd
-        sudo systemctl enable httpd
-        ```
+
+   - Update the package manager and install Apache:
+     ```bash
+     sudo yum update -y
+     sudo yum install httpd -y
+     ```
+   - Start and enable the Apache service:
+     ```bash
+     sudo systemctl start httpd
+     sudo systemctl enable httpd
+     ```
 
 4. **Deploy a Simple Website**:
-    - Create a simple HTML file in the Apache web directory:
-        ```bash
-        sudo echo "<html><h1>Hello, World!</h1></html>" > /var/www/html/index.html
-        ```
+
+   - Create a simple HTML file in the Apache web directory:
+     ```bash
+     sudo echo "<html><h1>Hello, World!</h1></html>" > /var/www/html/index.html
+     ```
 
 5. **Verify the Setup**:
-    - Open a web browser and navigate to your instance’s public IP.
-    - You should see the “Hello, World!” message displayed.
+   - Open a web browser and navigate to your instance’s public IP.
+   - You should see the “Hello, World!” message displayed.
 
 #### Transferring Files to Your EC2 Instance
 
 1. **Using SCP (Secure Copy)**:
-    - Open your terminal.
-    - Use the SCP command to transfer files:
-        ```bash
-        scp -i "path-to-your-key.pem" path-to-local-file ec2-user@<public-ip-address>:/desired/path/on/ec2
-        ```
+
+   - Open your terminal.
+   - Use the SCP command to transfer files:
+     ```bash
+     scp -i "path-to-your-key.pem" path-to-local-file ec2-user@<public-ip-address>:/desired/path/on/ec2
+     ```
 
 2. **Example SCP Command**:
-    - If your key is located in the Downloads directory and your file is `example.txt`:
-        ```bash
-        scp -i "~/Downloads/your-key.pem" example.txt ec2-user@<public-ip-address>:/home/ec2-user/
-        ```
+   - If your key is located in the Downloads directory and your file is `example.txt`:
+     ```bash
+     scp -i "~/Downloads/your-key.pem" example.txt ec2-user@<public-ip-address>:/home/ec2-user/
+     ```
 
 Handling Permission Denied Error
 Ensure the scp command is correctly formatted.
@@ -694,18 +720,22 @@ Implement proper key management practices.
 #### Connecting to an EC2 Instance with VS Code
 
 1. **Open VS Code:**
+
    - Launch Visual Studio Code on your local machine.
 
 2. **Install Remote Development Extension Pack:**
+
    - Go to the Extensions view (`Ctrl+Shift+X`).
    - Search for `Remote Development` and install the extension pack.
 
 3. **Connect to the EC2 Instance:**
+
    - Press `F1` to open the command palette.
    - Type `Remote-SSH: Connect to Host...` and select it.
    - Enter your EC2 instance's SSH details in the format `ssh -i "path/to/your-key.pem" ec2-user@<public-ip-address>`.
 
 4. **Set Up SSH Configuration (Optional):**
+
    - Edit your SSH configuration file (`~/.ssh/config` on Linux/Mac or `C:\Users\<YourUsername>\.ssh\config` on Windows):
      ```plaintext
      Host my-ec2-instance
@@ -722,36 +752,41 @@ Implement proper key management practices.
 #### Transferring Files to EC2 Instance Using SCP
 
 1. **Ensure Your SSH Key is Accessible:**
-    - Navigate to the directory containing your SSH key:
-      ```bash
-      cd ~/Downloads  # Or wherever your key file is located
-      ```
+
+   - Navigate to the directory containing your SSH key:
+     ```bash
+     cd ~/Downloads  # Or wherever your key file is located
+     ```
 
 2. **Set Appropriate Permissions on the SSH Key:**
-    - Ensure your key file has the correct permissions:
-      ```bash
-      chmod 400 your-key.pem
-      ```
+
+   - Ensure your key file has the correct permissions:
+     ```bash
+     chmod 400 your-key.pem
+     ```
 
 3. **Transfer the File Using SCP:**
-    - Use the `scp` command to transfer the file. For example, to transfer `fred.txt`:
-      ```bash
-      scp -i "your-key.pem" fred.txt ec2-user@<public-ip-address>:/home/ec2-user/
-      ```
-    - If prompted with "Are you sure you want to continue connecting (yes/no)?", type `yes`.
+   - Use the `scp` command to transfer the file. For example, to transfer `fred.txt`:
+     ```bash
+     scp -i "your-key.pem" fred.txt ec2-user@<public-ip-address>:/home/ec2-user/
+     ```
+   - If prompted with "Are you sure you want to continue connecting (yes/no)?", type `yes`.
 
 #### Managing EC2 Instances
 
 1. **Starting, Stopping, and Terminating Instances:**
+
    - Go to the EC2 Dashboard on AWS Management Console.
    - Select the instance you want to manage.
    - Use the `Instance State` dropdown to start, stop, or terminate the instance.
 
 2. **Monitoring Instances:**
+
    - Use the `Monitoring` tab to view instance metrics.
    - Set up CloudWatch alarms for automated monitoring and notifications.
 
 3. **Managing Security Groups:**
+
    - Go to the `Security Groups` section under the `Network & Security` tab in the EC2 Dashboard.
    - Select the relevant security group.
    - Edit inbound and outbound rules to control traffic.
@@ -763,6 +798,7 @@ Implement proper key management practices.
 #### Example Script to Automate Instance Setup
 
 1. **User Data Script:**
+
    - You can use a user data script to automate instance setup when launching an EC2 instance.
    - Example script to install a web server:
      ```bash
@@ -782,11 +818,14 @@ Implement proper key management practices.
 #### Connecting to a Windows EC2 Instance
 
 1. **Connecting via RDP:**
+
    - Open Remote Desktop Connection on your local machine.
    - Enter the public IP address or DNS of your Windows EC2 instance.
    - Use the username `Administrator`.
+     NB: Linux uses SSH while windows uses RDP
 
 2. **Decrypting the Password:**
+
    - In the EC2 Dashboard, select your Windows instance.
    - Click `Actions` -> `Get Windows Password`.
    - Upload your `.pem` key file to decrypt and reveal the password.
@@ -795,5 +834,6 @@ Implement proper key management practices.
    - Enter the decrypted password in the RDP client.
    - Connect to your Windows EC2 instance.
 
+```
 
-````
+```
