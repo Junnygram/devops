@@ -642,32 +642,27 @@ When you create an EC2 instance, AWS requires a key pair for secure SSH access. 
         scp -i "~/Downloads/your-key.pem" example.txt ec2-user@<public-ip-address>:/home/ec2-user/
         ```
 
-Handling Permission Denied Error:
+Handling Permission Denied Error
 Ensure the scp command is correctly formatted.
 Verify the key file path and permissions.
 Ensure the instance’s security group allows SSH connections (port 22).
 Using WinSCP for File Transfer (Windows)
 Download and Install WinSCP:
-Visit WinSCP and download the installer.
+
+Visit the WinSCP website and download the installer.
 Install WinSCP on your local machine.
 Configure WinSCP to Connect to Your EC2 Instance:
+
 Open WinSCP.
 Click "New Site".
 Set the file protocol to SFTP.
 Enter your EC2 instance's public IP in the "Host name" field.
 Set the username to ec2-user.
 Set the "Private key file" to your .pem file.
-Click "Save" to save this configuration, then click "Login".
+Click "Save", then click "Login".
 Transfer Files Using WinSCP:
-Use the WinSCP interface to drag and drop files between your local machine and the EC2 instance.
-Connecting to EC2 Instances Using Different Tools
-Connecting Using SSH from Terminal (Linux/Mac):
-Open your terminal.
-Use the SSH command to connect:
-bash
-Copy code
-ssh -i "your-key.pem" ec2-user@<public-ip-address>
 
+Use the WinSCP interface to drag and drop files between your local machine and the EC2 instance.
 
 Connecting Using PuTTY (Windows):
 Convert your .pem key to .ppk using PuTTYgen.
