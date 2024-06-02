@@ -317,8 +317,7 @@ Here's a simplified example of how to create an architecture diagram for a basic
 
 #### Final Diagram:
 
-
-[Cruddur Conceptual Diagram - Page 1.pdf](https://github.com/user-attachments/files/15526241/Cruddur.Conceptual.Diagram.-.Page.1.pdf)
+![ec](https://github.com/Junnygram/devops/assets/90139191/cb3505d2-30c0-46b1-ae01-85da439dfcd2)
 
 
 
