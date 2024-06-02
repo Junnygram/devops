@@ -151,16 +151,7 @@ AWS offers a wide variety of EC2 instance types to cater to different use cases.
 4. **Estimate Costs**:
    - The calculator will provide an estimated monthly cost based on your inputs. Adjust configurations as needed to fit your budget.
 
-### Summary
 
-- **Deployment Strategy**: Deploy your applications in regions closest to your users to reduce latency.
-- **Use of Edge Locations and Local Zones**: Leverage AWS Edge Locations and Local Zones for better performance.
-- **Instance Types**: Choose the right instance type based on your application needs (compute, memory, storage, or GPU).
-- **Cost Estimation**: Use the AWS Pricing Calculator to estimate and plan your costs across all required services.
-
-This structured approach should help in understanding and implementing an efficient, cost-effective AWS architecture.
-
-Great, let’s wrap up your instructions on EC2 instance types, and then move on to creating architecture diagrams.
 
 ### Understanding EC2 Instance Types:
 
@@ -228,6 +219,7 @@ AWS EC2 instances come in different families and sizes to match a variety of use
      - **EC2 Instances**: Icons for your compute resources.
      - **Database**: Icon for RDS or DynamoDB.
      - **Edge Locations**: Icons for CloudFront for CDN.
+       
    - **Flow**:
      - Users -> Load Balancer -> EC2 Instances -> Database.
      - Include CloudFront for caching static content.
@@ -345,7 +337,7 @@ Region: us-east-1
 
 
 
-#### AWS Free Tier Overview
+#### AWS Free Tier Overview ###
 
 AWS offers a Free Tier that includes 750 hours per month of t2.micro or t3.micro instances for a full year. Here’s a detailed breakdown:
 
