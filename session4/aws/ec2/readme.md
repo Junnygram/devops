@@ -317,18 +317,10 @@ Here's a simplified example of how to create an architecture diagram for a basic
 
 #### Final Diagram:
 
-**Users** → **Load Balancer** → ```
-Region: us-east-1
 
----
+[Cruddur Conceptual Diagram - Page 1.pdf](https://github.com/user-attachments/files/15526241/Cruddur.Conceptual.Diagram.-.Page.1.pdf)
 
-| AZ1: us-east-1a      | AZ2: us-east-1b    |
-| -------------------- | ------------------ | --- | --- | ------------ | --- |
-|                      | EC2 Instance       |     |     | EC2 Instance |     |
-|                      | EC2 Instance       |     |     | EC2 Instance |     |
-| -------------------- | ------------------ |
 
---- ````→ **RDS Instances**.
 
 #### AWS Free Tier Overview
 
