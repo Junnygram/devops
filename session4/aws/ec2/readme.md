@@ -186,21 +186,11 @@ AWS EC2 instances come in different families and sizes to match a variety of use
    - AWS provides a collection of icons and symbols to represent various services and components.
 
 2. **Tools for Creating Diagrams**:
-   - **Miro**: A collaborative online whiteboard platform. Ideal for team collaboration.
-   - **Draw.io** (also known as diagrams.net): A free, web-based diagramming tool. Good for quick and easy diagram creation.
+   - [Miro](https://miro.com/templates/aws-architecture-diagram/).
+   - [Draw.io](https://www.draw.io/).
+   - [Lucid chart](https://www.lucidchart.com/)
 
-### Steps to Create Architecture Diagrams:
-
-1. **Download AWS Icons**:
-   - Visit the AWS Architecture Icons page to download the official icons: [AWS Architecture Icons](https://aws.amazon.com/architecture/icons/).
-   - when we visit this website , we can see that there are numerous diagramming tools. here are few listed below:
-     i) **Using Miro**:
-     
-   i) [Miro](https://miro.com/templates/aws-architecture-diagram/).
-   ii) [Draw.io](https://www.draw.io/).
-   iii) [Lucid chart](https://www.lucidchart.com/)
-
-2. **Tips for Effective Diagrams**:
+3. **Tips for Effective Diagrams**:
    - **Keep it Simple**: Use clear and concise labels.
    - **Logical Grouping**: Group related components together.
    - **Consistency**: Use consistent symbols and notation.
