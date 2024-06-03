@@ -1,4 +1,6 @@
-EC2
+AWS EC2 for Beginners: Connecting, Managing, and Automating Instances
+
+Prerequisite: An AWS account is required to use Amazon EC2
 
 Amazon Web Services (AWS) introduced some of its first and most popular services in 2006, with Amazon S3 and Amazon EC2 being among the most notable. EC2 means Elastic Compute Cloud, provides scalable virtual servers in the cloud, which allows users to easily increase or decrease their server capacity as needed.
 
@@ -191,19 +193,14 @@ AWS EC2 instances come in different families and sizes to match a variety of use
 
 1. **Download AWS Icons**:
    - Visit the AWS Architecture Icons page to download the official icons: [AWS Architecture Icons](https://aws.amazon.com/architecture/icons/).
-2. **Using Miro**:
+   - when we visit this website , we can see that there are numerous diagramming tools. here are few listed below:
+     i) **Using Miro**:
+     
+   i) [Miro](https://miro.com/templates/aws-architecture-diagram/).
+   ii) [Draw.io](https://www.draw.io/).
+   iii) [Lucid chart](https://www.lucidchart.com/)
 
-   - Sign up for an account.
-   - Create a new board and drag AWS icons from your computer into the board.
-   - Arrange and label the icons to represent your architecture.
-
-3. **Using Draw.io**:
-
-   - Go to [Draw.io](https://www.draw.io/).
-   - Start a new diagram and select the AWS icon set.
-   - Drag and drop icons to build your architecture.
-
-4. **Tips for Effective Diagrams**:
+2. **Tips for Effective Diagrams**:
    - **Keep it Simple**: Use clear and concise labels.
    - **Logical Grouping**: Group related components together.
    - **Consistency**: Use consistent symbols and notation.
@@ -248,9 +245,9 @@ AWS EC2 instances come in different families and sizes to match a variety of use
 
    **Example**:
 
-   - Region (Blue)
-   - AZ1 (Light Blue)
-   - AZ2 (Light Green)
+   - Region (Ice)
+   - AZ1 (Melon)
+   - AZ2 (Mint)
 
 3. **Deploying EC2 Instances in Availability Zones**:
 
@@ -288,6 +285,7 @@ AWS EC2 instances come in different families and sizes to match a variety of use
 
 Here's a simplified example of how to create an architecture diagram for a basic web application:
 
+
 1. **Region and AZs**:
 
    - Draw a large rectangle and label it `us-east-1`.
@@ -317,8 +315,7 @@ Here's a simplified example of how to create an architecture diagram for a basic
 
 #### Final Diagram:
 
-![ec](https://github.com/Junnygram/devops/assets/90139191/cb3505d2-30c0-46b1-ae01-85da439dfcd2)
-
+![ec](https://github.com/Junnygram/devops/assets/90139191/358ae872-0d3f-4838-b464-d91b2a5a7e52)
 
 
 #### AWS Free Tier Overview
@@ -716,29 +713,28 @@ Implement proper key management practices.
 
 2. **Install Remote Development Extension Pack:**
 
-   - Go to the Extensions view (`Ctrl+Shift+X`).
+   - Go to the Extensions view (`Ctrl+Shift+X`) or click the extentensions button by the left.
    - Search for `Remote Development` and install the extension pack.
 
 3. **Connect to the EC2 Instance:**
-
-   - Press `F1` to open the command palette.
-   - Type `Remote-SSH: Connect to Host...` and select it.
-   - Enter your EC2 instance's SSH details in the format `ssh -i "path/to/your-key.pem" ec2-user@<public-ip-address>`.
-
-4. **Set Up SSH Configuration (Optional):**
-
-   - Edit your SSH configuration file (`~/.ssh/config` on Linux/Mac or `C:\Users\<YourUsername>\.ssh\config` on Windows):
-     ```plaintext
-     Host my-ec2-instance
-         HostName <public-ip-address>
-         User ec2-user
-         IdentityFile path/to/your-key.pem
+4. 
+ - Click on the blue panel below . ![Screenshot 2024-06-03 at 08 13 29](https://github.com/Junnygram/devops/assets/90139191/10ab24b5-22eb-4401-8f23-9d5667208190)
+ - 
+   - Connect to Host > Configure SSH Host... >  (`~/Users/<YourUsername>/.ssh/config` on Linux/Mac or `C:\Users\<YourUsername>\.ssh\config` on Windows):  .
+   - ```edit the config file
+      Host my-ec2-instance
+      HostName <public-ip-address>
+      User ec2-user
+      IdentityFile path/to/your-key.pem
      ```
-   - Now, you can connect using `my-ec2-instance` as the host.
+     then save
+     
+   - now click on the panel again  ![Screenshot 2024-06-03 at 08 13 29](https://github.com/Junnygram/devops/assets/90139191/10ab24b5-22eb-4401-8f23-9d5667208190)
+   - 
+   - Connect to Host, now we will see the Host we configured then click on it . this will automatically connect to our host.
+ Now, you can connect using `my-ec2-instance` as the host.
 
-5. **Open Terminal and Folders:**
-   - Once connected, you can open a terminal by going to `View` -> `Terminal` or pressing `Ctrl+``.
-   - To open a folder, go to `File` -> `Open Folder...` and select the directory you want to work in on the EC2 instance.
+
 
 #### Transferring Files to EC2 Instance Using SCP
 
@@ -825,6 +821,4 @@ Implement proper key management practices.
    - Enter the decrypted password in the RDP client.
    - Connect to your Windows EC2 instance.
 
-```
 
-```
