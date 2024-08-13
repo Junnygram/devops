@@ -1,3 +1,7 @@
+Here’s a summary that includes the content from the two images provided:
+
+---
+
 #### Docker Overview
 
 **What is Docker?**
@@ -27,8 +31,17 @@ CMD ["python3"]
 
 #### Kubernetes Overview
 
-**Kubernetes Overview:**
+**What is Kubernetes?**
 - Kubernetes is an open-source platform designed to automate deploying, scaling, and operating application containers.
+
+**Kubernetes Components:**
+1. **Kubernetes Program (K8s):** A manager program responsible for monitoring and maintaining containers.
+2. **Pods:** The smallest unit in Kubernetes that manages containers.
+
+**Kubernetes Features:**
+- K8s can manage multiple containers across different nodes in a cluster.
+- Kubernetes ensures that if a container crashes, it restarts it or creates a new one with the same connectivity.
+- Kubernetes is a more mature and reliable container management solution compared to Docker Swarm.
 
 **Minikube:**
 - Minikube is a tool that allows you to run Kubernetes locally.
@@ -73,4 +86,8 @@ spec:
 - **kubectl get pods:** Lists all Pods running in the cluster.
 - **kubectl apply -f <filename.yaml>:** Applies a configuration file (like pod.yaml or service.yaml) to the cluster.
 
-This summary provides a high-level overview of Docker and Kubernetes, covering basic concepts, commands, and YAML configuration examples. If you need more detailed documentation or specific examples, feel free to ask!
+This summary provides a high-level overview of Docker and Kubernetes, covering basic concepts, commands, and YAML configuration examples.
+
+---
+
+If you need any more details or specific examples, feel free to ask!
