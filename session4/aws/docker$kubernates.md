@@ -90,4 +90,3 @@ This summary provides a high-level overview of Docker and Kubernetes, covering b
 
 ---
 
-If you need any more details or specific examples, feel free to ask!
