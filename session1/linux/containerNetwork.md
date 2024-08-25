@@ -1,4 +1,4 @@
-To solve this task, I'll walk you through each step outlined in the tutorial, providing the necessary commands and explanations along the way.
+How Container Networking Works: a Docker Bridge Network From Scratch
 
 ### Step 1: Create a Network Namespace
 
